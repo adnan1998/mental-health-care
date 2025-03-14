@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #f7edf0;
+  --secondary: #f4cbc6;
+  --accent: #f4afab;
+  --text: #5e4a4e;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+@layer components {
+  .soft-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .message-bubble {
+    @apply p-4 rounded-2xl max-w-[80%] soft-transition;
+  }
+}
